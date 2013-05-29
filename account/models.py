@@ -2,7 +2,6 @@ import datetime
 import operator
 import urllib
 
-from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.db import models, transaction
 from django.db.models import Q
@@ -18,6 +17,7 @@ from django.contrib.sites.models import Site
 import pytz
 
 from account import signals
+from account.gae import send_mail
 from account.conf import settings
 from account.fields import TimeZoneField
 from account.managers import EmailAddressManager, EmailConfirmationManager
